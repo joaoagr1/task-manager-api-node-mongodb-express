@@ -9,7 +9,7 @@ export default class UserService {
     }
 
     async findById(id: User["_id"]) {
-        const findedBook = await userModel.findById(id)
+   const findedBook = await userModel.findById(id)
         return findedBook
     }
 }

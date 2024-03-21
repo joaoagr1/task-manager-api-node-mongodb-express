@@ -13,7 +13,8 @@ const userSchema = new Schema<User>({
     password: String,
     email: String
 }, {
-    versionKey: false
+    versionKey: false,
+    timestamps:true
 });
 
 export default model<User>('User', userSchema);
