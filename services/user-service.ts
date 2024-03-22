@@ -4,7 +4,8 @@ import {User} from "../entity/user"
 
 export default class UserService {
     async create(user: User) {
-        const createdBook = userModel.create(user)
+        
+        const createdBook = await userModel.create(user)
         return createdBook
     }
 
