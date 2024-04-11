@@ -1,16 +1,19 @@
-import { Schema, model, Document } from "mongoose";
+import mongoose,{ Schema, model, Document } from "mongoose";
 
-interface Category extends Document {
-    name:String;
-    color:String;
+export default interface CategoryInterface extends Document {
+    name: String;
+    color: String;
 }
 
-const categorySchema = new Schema<Category>({
-    name:String,
-    color:String
+const categorySchema = new Schema<CategoryInterface>({
+    name: String,
+    color: String
 }, {
     versionKey: false
 });
 
-export default model<Category>('Category', categorySchema);
- 
+
+const Category = mongoose.models.user || model<CategoryInterface>('Category', categorySchema);
+
+export { Category };
+

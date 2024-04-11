@@ -3,27 +3,27 @@ https://dontpad.com/esoft5s-a-bussola
 Express ou Fastify
 
 check-list:
-[] - Entender a atividade, isso envolve ler a atividade
-[] - Instalar as dependencias
+[ok] - Entender a atividade, isso envolve ler a atividade 
+[ok] - Instalar as dependencias 
 [] - Opcional - Criar um dockerfile e um docker-compose.yml pra criar o container do banco escolhido
-[] - Da um check se o servidor está funcionando
-[] - Criar a service para a entidade escolhida, e fazer o CRUD
-[] - Fazer a controller
-[] - Criar as rotas no arquivo de rotas
-[] - Testar as rotas
+[ok] - Da um check se o servidor está funcionando 
+[ok] - Criar a service para a entidade escolhida, e fazer o CRUD 
+[ok] - Fazer a controller
+[ok] - Criar as rotas no arquivo de rotas 
+[ok] - Testar as rotas 
 [] - Partir para as rotas com regra de negócio
 
 	
 Entidades:
 
-- Usuário:
-	Atributos: ID, username, peso, senha, e-mail.
+[ok]- Usuário:
+	Atributos: ID, username, peso, senha, e-mail. [OK]
 	
-- Categoria:
-	Atributos: ID, nome, cor (para identificação visual).
+[ok]- Categoria:
+	Atributos: ID, nome, cor (para identificação visual). [OK]
 
-- Tarefa:
-	Atributos: ID, título, descrição, data de criação, data de conclusão, tipo, categoria (opcional), status (pendente, em andamento, concluída), e usuário associado.
+[ok]- Tarefa:
+	Atributos: ID, título, descrição, data de criação, data de conclusão, tipo, categoria (opcional), status (pendente, em andamento, concluída), e usuário associado. [OK]
 
 
 
@@ -31,20 +31,20 @@ Requisitos das Rotas (OPICIONAL - FAÇA POR ÚLTIMO):
 
 Autenticação:
 
-Rota de registro de usuário.
-Rota de login de usuário.
+[ok]Rota de registro de usuário.
+[ok]Rota de login de usuário.
 
 Tarefas:
 
-Rota para criação de uma nova tarefa.
-Rota para listar todas as tarefas de um usuário.
-Rota para obter detalhes de uma tarefa específica.
+[ok]Rota para criação de uma nova tarefa.
+[ok]Rota para listar todas as tarefas de um usuário.
+[ok]Rota para obter detalhes de uma tarefa específica.
 Rota para atualizar uma tarefa existente.
 Rota para excluir uma tarefa.
 
 Categorias:
 
-Rota para criação de uma nova categoria.
+[ok]Rota para criação de uma nova categoria.
 Rota para listar todas as categorias de um usuário.
 Rota para obter detalhes de uma categoria específica.
 Rota para atualizar uma categoria existente.
