@@ -8,14 +8,20 @@ class CategoryController {
         response.json(createdCategory)
     }
 
-    async getAllCategoryByUser(request: Request, response:Response){
+    async getAllCategoryByUser(request: Request, response: Response) {
         const categorys = await new CategoryService().findAllCategoryByUser(request.params.id);
         console.log("categorias controller: " + categorys + "teste")
         return response.json(categorys);
 
+
     }
 
-    
+    async delete(request: Request, response: Response) {
+        const deletedCategory = await new CategoryService().delete(request.params.id)
+        response.json(deletedCategory)
+    }
+
+
 
 
 

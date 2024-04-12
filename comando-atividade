@@ -45,10 +45,10 @@ Tarefas:
 Categorias:
 
 [ok]Rota para criação de uma nova categoria.
-Rota para listar todas as categorias de um usuário.
-Rota para obter detalhes de uma categoria específica.
-Rota para atualizar uma categoria existente.
-Rota para excluir uma categoria.
+[ok]Rota para listar todas as categorias de um usuário.
+[ok]Rota para obter detalhes de uma categoria específica.
+[ok]Rota para atualizar uma categoria existente.
+[]Rota para excluir uma categoria.
 
 Funcionalidades Adicionais utilizando Métodos de Array:
 

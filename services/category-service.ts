@@ -12,23 +12,27 @@ export default class CategoryService {
         return findedCategory;
     }
 
-    async findAllCategoryByUser(id: Userinterface["_id"]){
-        var categoryUserList:any = [];
+    async findAllCategoryByUser(id: Userinterface["_id"]) {
+        var categoryUserList: any = [];
         const distinctCategories = await taskModel.distinct('category', { responsibleUser: id });
-        distinctCategories.forEach(async(index) => {
-           // console.log(index)
-        const findedCategory = await Category.findById(index);
+        distinctCategories.forEach(async (index) => {
+            // console.log(index)
+            const findedCategory = await Category.findById(index);
             //console.log(findedCategory)
-        categoryUserList.push(findedCategory)
+            categoryUserList.push(findedCategory)
             console.log(categoryUserList)
 
         })
 
-    return categoryUserList;
-
-   
-
+        return categoryUserList;
     }
+
+
+    async delete(id: CategoryInterface["_id"]) {
+        const deletedCategory = await Category.findByIdAndDelete(id);
+        return deletedCategory;
+    }
+
 }
 
-export {CategoryService}
+export { CategoryService }
