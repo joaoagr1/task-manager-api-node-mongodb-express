@@ -8,13 +8,13 @@ export default class TaskService {
     async create(task: Task) {
         const findedResponsibleUser = await new UserService().findById(task.responsibleUser);
         const findedCategory = await new CategoryService().findById(task.category);
-        
+
         if (!findedCategory) {
             throw new Error('Category not found');
         }
 
         task.responsibleUser = findedResponsibleUser;
-        task.category = findedCategory; 
+        task.category = findedCategory;
 
         const createdTask = await taskModel.create(task);
         return createdTask;
@@ -32,9 +32,14 @@ export default class TaskService {
     }
 
 
-    async findAllByUserId(id:Userinterface["_id"]){
+    async findAllByUserId(id: Userinterface["_id"]) {
         const tasks = await taskModel.find({ responsibleUser: id });
         return tasks;
+    }
+
+    async update(task: Task) {
+        const updatedTask = await taskModel.findByIdAndUpdate(task._id, task, { new: true });
+        return updatedTask;
     }
 
 

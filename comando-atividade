@@ -39,7 +39,7 @@ Tarefas:
 [ok]Rota para criação de uma nova tarefa.
 [ok]Rota para listar todas as tarefas de um usuário.
 [ok]Rota para obter detalhes de uma tarefa específica.
-[]Rota para atualizar uma tarefa existente.
+[ok]Rota para atualizar uma tarefa existente.
 [ok]Rota para excluir uma tarefa.
 
 Categorias:
@@ -47,8 +47,8 @@ Categorias:
 [ok]Rota para criação de uma nova categoria.
 [ok]Rota para listar todas as categorias de um usuário.
 [ok]Rota para obter detalhes de uma categoria específica.
-[ok]Rota para atualizar uma categoria existente.
-[]Rota para excluir uma categoria.
+[]Rota para atualizar uma categoria existente.
+[ok]Rota para excluir uma categoria.
 
 Funcionalidades Adicionais utilizando Métodos de Array:
 

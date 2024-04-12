@@ -14,7 +14,7 @@ routes.delete('/task-delete/:id', taskController.delete)
 routes.get('/task/all-from-user/:id', taskController.getAllByUser)
 routes.get('/category/all-from-user/:id', categoryController.getAllCategoryByUser)
 routes.delete('/category-delete/:id', categoryController.delete)
-
+routes.put('/task-update', taskController.update)
 
 
 export {
