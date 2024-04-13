@@ -22,6 +22,12 @@ export default class TaskService {
         return createdTask;
     }
 
+    async tasksExpiredThisDay(expiration: Date) {
+        const tasks = await taskModel.find({ expiration: expiration });
+        return tasks;
+
+    }
+
 
     async findBiggerDescription() {
         const findedTask = await taskModel.find().sort({ description: -1 }).limit(1);

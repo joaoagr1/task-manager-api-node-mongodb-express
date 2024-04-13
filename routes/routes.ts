@@ -22,7 +22,8 @@ routes.get('/most-recent-task/:id', taskController.findMostRecentTaskByUser)
 routes.get('/task-completed-average', taskController.taskCompletedAverage)
 routes.get('/group-tasks-by-category/:id', taskController.findByCategory)
 routes.get('/most-old-task/:id', taskController.findMostOldTaskByUser)
-routes.get('bigger-descption-task', taskController.findBiggestDescription)
+routes.get('/bigger-descption-task', taskController.findBiggestDescription)
+routes.get('/expired-this-day/:date', taskController.tasksExpiredThisDay)
 
 export {
     routes

@@ -75,6 +75,12 @@ class TaskController {
         return res.status(200).json(biggestDescription)
     }
 
+    async tasksExpiredThisDay(req: Request, res: Response) {
+        const dateParam = req.params.Date;
+        const date = new Date(dateParam);
+        const tasks = await new TaskService().tasksExpiredThisDay(date)
+        return res.status(200).json(tasks)
+    }
 
 
 

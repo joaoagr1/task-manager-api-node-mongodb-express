@@ -10,6 +10,7 @@ export interface Task extends Document {
     status: string;
     category: typeof Category;
     responsibleUser: typeof User;
+    expiration?: Date;
 
 }
 
@@ -26,7 +27,8 @@ const taskSchema = new Schema<Task>({
     type: { type: String },
     category: { type: Schema.Types.ObjectId, ref: 'Category', required: false },
     status: { type: String, required: true, enum: Object.values(TaskStatus) },
-    responsibleUser: { type: Schema.Types.ObjectId, ref: 'User', required: false }
+    responsibleUser: { type: Schema.Types.ObjectId, ref: 'User', required: false },
+    expiration: { type: Date }
 }, { timestamps: true });
 
 
