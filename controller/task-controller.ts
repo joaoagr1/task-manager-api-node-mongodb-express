@@ -54,6 +54,30 @@ class TaskController {
         return res.status(200).json(mostRecentTask)
     }
 
+    async findMostOldTaskByUser(req: Request, res: Response) {
+        const mostOldTask = await new TaskService().findMostOldTaskByUser(req.params.id)
+        return res.status(200).json(mostOldTask)
+    }
+
+
+    async taskCompletedAverage(req: Request, res: Response) {
+        const average = await new TaskService().tasksCompletedAvarege()
+        return res.status(200).json(average)
+    }
+
+    async groupByCategory(req: Request, res: Response) {
+        const group = await new TaskService().groupByCategory()
+        return res.status(200).json(group)
+    }
+
+    async findBiggestDescription(req: Request, res: Response) {
+        const biggestDescription = await new TaskService().findBiggerDescription()
+        return res.status(200).json(biggestDescription)
+    }
+
+
+
+
 }
 
 export default new TaskController()

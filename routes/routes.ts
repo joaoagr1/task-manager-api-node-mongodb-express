@@ -19,6 +19,10 @@ routes.get('/pending-tasks', taskController.findPendingTasks)
 routes.get('/completed-tasks', taskController.findCompletedTasks)
 routes.get('/count-tasks/:id', taskController.countAllByUser)
 routes.get('/most-recent-task/:id', taskController.findMostRecentTaskByUser)
+routes.get('/task-completed-average', taskController.taskCompletedAverage)
+routes.get('/group-tasks-by-category/:id', taskController.findByCategory)
+routes.get('/most-old-task/:id', taskController.findMostOldTaskByUser)
+routes.get('bigger-descption-task', taskController.findBiggestDescription)
 
 export {
     routes

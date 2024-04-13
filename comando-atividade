@@ -11,7 +11,7 @@ check-list:
 [ok] - Fazer a controller
 [ok] - Criar as rotas no arquivo de rotas 
 [ok] - Testar as rotas 
-[] - Partir para as rotas com regra de negócio
+[ok] - Partir para as rotas com regra de negócio
 
 	
 Entidades:
@@ -57,12 +57,11 @@ Funcionalidades Adicionais utilizando Métodos de Array:
 Rota para listar tarefas que vencem em um determinado período.
 [ok]Rota para contar o número total de tarefas de um usuário.
 [ok]Rota para encontrar a tarefa mais recente de um usuário.
-Rota para calcular a média de conclusão das tarefas.
-Rota para encontrar a tarefa com a descrição mais longa.
-Rota para agrupar tarefas por categoria.
-Rota para encontrar a tarefa mais antiga de um usuário.
+[ok]Rota para calcular a média de conclusão das tarefas.
+[ok]Rota para encontrar a tarefa com a descrição mais longa.
+[ok]Rota para agrupar tarefas por categoria.
+[ok]Rota para encontrar a tarefa mais antiga de um usuário.
 
-total completa x 100 / total geral
 Observação:
 
 
