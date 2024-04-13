@@ -22,6 +22,8 @@ class UserController {
         return res.send("Usuario logado com sucesso")
     }
 
+
+
 }
 
 export default new UserController()

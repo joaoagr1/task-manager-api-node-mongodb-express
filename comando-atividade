@@ -47,22 +47,22 @@ Categorias:
 [ok]Rota para criação de uma nova categoria.
 [ok]Rota para listar todas as categorias de um usuário.
 [ok]Rota para obter detalhes de uma categoria específica.
-[]Rota para atualizar uma categoria existente.
+[ok]Rota para atualizar uma categoria existente.
 [ok]Rota para excluir uma categoria.
 
 Funcionalidades Adicionais utilizando Métodos de Array:
 
-Rota para filtrar tarefas por categoria.
-Rota para listar tarefas concluídas / pendentes.
+[ok]Rota para filtrar tarefas por categoria.
+[ok]Rota para listar tarefas concluídas / pendentes.
 Rota para listar tarefas que vencem em um determinado período.
-Rota para contar o número total de tarefas de um usuário.
-Rota para encontrar a tarefa mais recente de um usuário.
-
+[ok]Rota para contar o número total de tarefas de um usuário.
+[ok]Rota para encontrar a tarefa mais recente de um usuário.
 Rota para calcular a média de conclusão das tarefas.
 Rota para encontrar a tarefa com a descrição mais longa.
 Rota para agrupar tarefas por categoria.
 Rota para encontrar a tarefa mais antiga de um usuário.
 
+total completa x 100 / total geral
 Observação:
 
 

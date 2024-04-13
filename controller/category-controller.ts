@@ -21,6 +21,11 @@ class CategoryController {
         response.json(deletedCategory)
     }
 
+    async update(request: Request, response: Response) {
+        const updatedCategory = await new CategoryService().update(request.body)
+        response.json(updatedCategory)
+    }
+
 
 
 

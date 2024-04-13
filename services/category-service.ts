@@ -12,6 +12,7 @@ export default class CategoryService {
         return findedCategory;
     }
 
+
     async findAllCategoryByUser(id: Userinterface["_id"]) {
         var categoryUserList: any = [];
         const distinctCategories = await taskModel.distinct('category', { responsibleUser: id });
@@ -33,6 +34,12 @@ export default class CategoryService {
         return deletedCategory;
     }
 
+
+    async update(category: CategoryInterface) {
+        const updatedCategory = await Category
+        return updatedCategory;
+
+    }
 }
 
 export { CategoryService }

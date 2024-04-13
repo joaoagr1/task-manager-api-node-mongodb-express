@@ -1,5 +1,6 @@
 import Userinterface from "../entity/user"
 import { Task } from "../entity/task"
+import Category from "../entity/category"
 import taskModel from "../entity/task"
 import UserService from "../services/user-service";
 import CategoryService from "../services/category-service";
@@ -37,9 +38,44 @@ export default class TaskService {
         return tasks;
     }
 
+    async countAllByUserId(id: Userinterface["_id"]) {
+        const tasks = await taskModel.find({ responsibleUser: id });
+        return tasks.length;
+    }
+
+
+
     async update(task: Task) {
         const updatedTask = await taskModel.findByIdAndUpdate(task._id, task, { new: true });
         return updatedTask;
+    }
+
+    async findAllByCategory(id: Category["_id"]) {
+        const tasksByCategory = await taskModel.find({ "category": id });
+        return tasksByCategory;
+
+    }
+
+    async findPendingTasks(id: Task["_id"]) {
+        const pendingTasks = await taskModel.find({ status: "pending" });
+        return pendingTasks;
+    }
+
+    async findCompletedTasks(id: Task["_id"]) {
+        const completedTasks = await taskModel.find({ status: "completed" });
+        return completedTasks;
+    }
+
+
+    async findMostRecentTaskByUser(id: Userinterface["_id"]) {
+        const task = await taskModel.findOne({ responsibleUser: id }).sort({ createdAt: -1 });
+        return task;
+    }
+
+    async tasksCompletedAvarege() {
+        const completedTasks = await taskModel.find({ status: "completed" });
+        const totalTasks = await taskModel.find();
+        return (completedTasks.length / totalTasks.length) * 100;
     }
 
 

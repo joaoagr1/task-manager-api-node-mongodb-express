@@ -29,6 +29,30 @@ class TaskController {
         return res.status(200).json(updatedTask);
     }
 
+    async findByCategory(req: Request, res: Response) {
+        const tasksByCategory = await new TaskService().findAllByCategory(req.params.id)
+        return res.status(200).json(tasksByCategory)
+    }
+
+    async findPendingTasks(req: Request, res: Response) {
+        const pendingTasks = await new TaskService().findPendingTasks(req.params.id)
+        return res.status(200).json(pendingTasks)
+    }
+
+    async findCompletedTasks(req: Request, res: Response) {
+        const completedTasks = await new TaskService().findCompletedTasks(req.params.id)
+        return res.status(200).json(completedTasks)
+    }
+
+    async countAllByUser(req: Request, res: Response) {
+        const count = await new TaskService().countAllByUserId(req.params.id)
+        return res.status(200).json(count)
+    }
+
+    async findMostRecentTaskByUser(req: Request, res: Response) {
+        const mostRecentTask = await new TaskService().findMostRecentTaskByUser(req.params.id)
+        return res.status(200).json(mostRecentTask)
+    }
 
 }
 

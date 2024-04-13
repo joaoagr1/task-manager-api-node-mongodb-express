@@ -15,7 +15,10 @@ routes.get('/task/all-from-user/:id', taskController.getAllByUser)
 routes.get('/category/all-from-user/:id', categoryController.getAllCategoryByUser)
 routes.delete('/category-delete/:id', categoryController.delete)
 routes.put('/task-update', taskController.update)
-
+routes.get('/pending-tasks', taskController.findPendingTasks)
+routes.get('/completed-tasks', taskController.findCompletedTasks)
+routes.get('/count-tasks/:id', taskController.countAllByUser)
+routes.get('/most-recent-task/:id', taskController.findMostRecentTaskByUser)
 
 export {
     routes
