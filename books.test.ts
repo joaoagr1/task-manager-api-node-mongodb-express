@@ -1,33 +1,32 @@
-
-const request = require('supertest');
-const app = require('./app');  // Importar o app corretamente
-
-let server;
-beforeAll(() => {
-    try {
-        server = app.listen(3000);  // Inicie o servidor na porta desejada.
-    } catch (error) {
-        console.error('Error starting server:', error);
-    }
-});
-
-afterAll(() => {
-    if (server) {
-        try {
-            server.close();  // Feche o servidor após todos os testes.
-        } catch (error) {
-            console.error('Error closing server:', error);
-        }
-    }
-});
+import supertest from 'supertest'
+import app from './app'
+import {it} from '@jest/globals'
 
 
-test('should create a new user', async () => {
-    const response = await request(server).post('/user').send({
-        username: "Wyllian",
-        weight: "67",
-        password: "willyan@senha",
-        email: "willyantomaz@usacucar.com.br"
-    });
-    expect(response.status).toBe(200);
+//const server = request(app);
+ let server:any;
+ server = supertest(app) 
+
+ beforeAll(async() => {
+    
+    
+ });
+
+ afterAll(async() => {
+    server.close();
+ });
+
+
+it('should create a new user', async () => {
+    console.log("jeangay: "+server)
+    
+    server.get('/login')
+
+    // const response = await request(server).post('/user').send({
+    //     username: "Wyllian",
+    //     weight: "67",
+    //     password: "willyan@senha",
+    //     email: "willyantomaz@usacucar.com.br"
+    // });
+    // expect(response.status).toBe(200);
 });

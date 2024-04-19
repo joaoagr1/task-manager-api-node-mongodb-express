@@ -20,7 +20,7 @@ class App {
         try {
             mongoose.set("strictQuery", true)
             await mongoose.connect('mongodb://0.0.0.0:27017/task-manager-db')
-            console.log("connect database success")
+          //  console.log("connect database success")
         } catch (error) {
             console.error('Cannot connect to database, error:', error)
         }
