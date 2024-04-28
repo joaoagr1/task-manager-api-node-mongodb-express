@@ -8,7 +8,10 @@ export default interface Userinterface extends Document {
 }
 
 const userSchema = new mongoose.Schema<Userinterface>({
-    username: String,
+    username: {
+        type: String,
+        required: true // Define o campo como obrigatório
+    },
     weight: Number,
     password: String,
     email: String
